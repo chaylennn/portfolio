@@ -25,9 +25,20 @@ for (let p of pages) {
 
   url = !url.startsWith('http') ? BASE_PATH + url : url;
 
-  let external = url.startsWith('http');
-  nav.insertAdjacentHTML(
-    'beforeend',
-    `<a href="${url}"${external ? ' target="_blank" rel="noopener noreferrer"' : ''}>${title}</a>`
+  let a = document.createElement('a');
+  a.href = url;
+  a.textContent = title;
+  nav.append(a);
+
+  // Highlight the current page
+  a.classList.toggle(
+    'current',
+    a.host === location.host && a.pathname === location.pathname,
   );
+
+  // Open external links in a new tab
+  if (a.host !== location.host) {
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+  }
 }
