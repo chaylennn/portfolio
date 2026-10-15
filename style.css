@@ -15,6 +15,7 @@ nav {
   display: flex;
   margin-bottom: 1em;
   border-bottom: 1px solid var(--border-color);
+  margin-top: 1.5em;
 }
 
 nav a {
