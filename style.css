@@ -46,7 +46,8 @@ nav a:hover {
 
 input,
 textarea,
-button {
+button,
+select {
   font: inherit;
 }
 
@@ -140,4 +141,11 @@ article header p:nth-of-type(2) {
 article ul {
   margin-block: 0.5em 0;
   padding-left: 1.2em;
+}
+
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
 }
