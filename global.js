@@ -4,12 +4,6 @@ function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
 
-console.log('IT’S ALIVE!');
-
-function $$(selector, context = document) {
-  return Array.from(context.querySelectorAll(selector));
-}
-
 const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
   ? "/"                  // Local server
   : "/portfolio/";       // GitHub Pages repo name
@@ -37,11 +31,3 @@ for (let p of pages) {
     `<a href="${url}"${external ? ' target="_blank" rel="noopener noreferrer"' : ''}>${title}</a>`
   );
 }
-
-// let navLinks = $$("nav a");
-
-// let currentLink = navLinks.find(
-//   (a) => a.host === location.host && a.pathname === location.pathname,
-// );
-
-// currentLink?.classList.add('current');
