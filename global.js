@@ -105,4 +105,37 @@ export async function fetchJSON(url) {
   }
 }
 
-fetchJSON(BASE_PATH + 'lib/projects.json').then(console.log);
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+  // Make sure we have a place to render into
+  if (!containerElement) {
+    console.error('renderProjects: container element not found');
+    return;
+  }
+
+  // Only allow real heading tags
+  const validHeadings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+  if (!validHeadings.includes(headingLevel)) {
+    headingLevel = 'h2';
+  }
+
+  // Clear existing content so projects aren't duplicated
+  containerElement.innerHTML = '';
+
+  // Show a message if there is nothing to render
+  if (!Array.isArray(projects) || projects.length === 0) {
+    containerElement.innerHTML = '<p>No projects to show yet.</p>';
+    return;
+  }
+
+  for (let project of projects) {
+    const article = document.createElement('article');
+
+    article.innerHTML = `
+      <${headingLevel}>${project.title}</${headingLevel}>
+      <img src="${project.image}" alt="${project.title}">
+      <p>${project.description}</p>
+    `;
+
+    containerElement.appendChild(article);
+  }
+}
