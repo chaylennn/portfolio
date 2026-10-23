@@ -168,6 +168,10 @@ article ul {
   font-size: 200%;
 }
 
+.projects article {
+  min-width: 0;
+}
+
 .projects img {
   width: 100%;
   aspect-ratio: 16 / 9;
