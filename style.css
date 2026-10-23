@@ -169,5 +169,7 @@ article ul {
 }
 
 .projects img {
-  max-width: 100%;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
 }
