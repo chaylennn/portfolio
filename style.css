@@ -75,11 +75,6 @@ form button {
   gap: 1em;
 }
 
-.projects article{
-  display: grid;
-  grid-template-rows: subgrid;
-  grid-row: span 3;
-}
 
 .projects h2{
   margin: 0;
@@ -168,12 +163,17 @@ article ul {
   font-size: 200%;
 }
 
-.projects article {
-  min-width: 0;
-}
 
 .projects img {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
+}
+
+.projects article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-row: span 3;
+  min-width: 0;
 }
