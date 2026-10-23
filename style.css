@@ -167,3 +167,7 @@ article ul {
   margin: 0;
   font-size: 200%;
 }
+
+.projects img {
+  max-width: 100%;
+}
