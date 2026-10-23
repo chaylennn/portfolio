@@ -1,62 +1,74 @@
 [
-    {
-        "title": "Lorem ipsum dolor sit.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ipsa ea atque beatae dignissimos iure veritatis. Nemo doloremque laboriosam similique asperiores? Ullam id voluptatem ut quas, facere eius vitae expedita!"
-    },
-    {
-        "title": "Quam sequi quaerat itaque.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Eaque quos pariatur distinctio beatae, totam consequuntur sint, a neque labore, harum ullam nihil nemo porro dolor tenetur commodi ex! Possimus cupiditate harum expedita, explicabo facilis ab earum dolor modi?"
-    },
-    {
-        "title": "Numquam itaque quibusdam delectus!",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Nemo nam doloribus aut expedita quaerat dolores ullam rerum est cum corporis perferendis, porro incidunt dolore itaque modi quidem ad tempore eaque voluptates in magni pariatur molestias. Corporis, debitis dolores."
-    },
-    {
-        "title": "Illum repellat quis magni!",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Veniam, aliquid iste consectetur ipsam tempora dolore repellat unde doloribus quisquam quod tenetur esse veritatis ipsa in molestiae sunt atque illum fugit ut. Labore voluptatem cumque laboriosam distinctio voluptate reiciendis?"
-    },
-    {
-        "title": "Minima cupiditate facilis aliquid?",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Incidunt autem facilis sequi assumenda ut doloremque? Quisquam perspiciatis dolores quos atque quidem. Temporibus voluptatem eligendi incidunt assumenda magnam! Quidem repudiandae itaque saepe molestias ad veritatis possimus ipsam id vel?"
-    },
-    {
-        "title": "Ex cumque dolorem expedita.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Maxime nam assumenda cupiditate, quis eos dolorum eveniet a corrupti aut. Rem, porro itaque? A perferendis et, ratione, odio dignissimos quidem totam doloremque molestiae culpa, exercitationem ipsum ullam praesentium fuga."
-    },
-    {
-        "title": "Magni perspiciatis ut quos?",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Hic amet illo reiciendis ratione, quos eum? Fuga id nihil cumque beatae dolore fugit adipisci quod est ad repudiandae, veniam, accusamus amet, ex rerum qui laborum excepturi! Hic, vel quis!"
-    },
-    {
-        "title": "Eveniet necessitatibus eos quas.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Suscipit nulla voluptatum minima quibusdam! Iusto architecto ipsum consequatur, harum cupiditate ipsa neque voluptatem dolorum aut, alias at debitis optio quod tenetur quidem ex magni odio velit! Dicta, sint soluta!"
-    },
-    {
-        "title": "Saepe possimus id quia!",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Sit a corrupti, hic ad necessitatibus nulla reiciendis earum exercitationem nam quam consequatur perferendis repellat soluta beatae! Temporibus doloremque a quis, hic repudiandae similique minima nam, ipsa quas ipsam sed."
-    },
-    {
-        "title": "Beatae obcaecati veniam aliquid.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Optio tenetur suscipit repellat inventore ex minus sit, atque voluptatem, non dolor iste saepe repudiandae. Fugiat sunt voluptatum dolore iure vitae praesentium placeat explicabo accusantium, dignissimos, laboriosam doloribus maxime esse?"
-    },
-    {
-        "title": "Quia deserunt quae ex.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "In repudiandae error quia dolore laboriosam recusandae temporibus odio nulla qui similique cumque porro repellendus voluptates, alias expedita. Aliquid quibusdam quas quia placeat nulla unde nostrum amet consequatur sapiente vitae."
-    },
-    {
-        "title": "Corrupti soluta cum quisquam?",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Dicta voluptate tenetur praesentium voluptatem iste facere sequi dolorem illum minus asperiores quod, veniam molestias amet magnam unde neque. Esse numquam amet soluta necessitatibus adipisci porro eveniet nobis doloribus eius?"
-    }
+  {
+    "title": "Persuasive or Deceptive Visualization?",
+    "year": "2026",
+    "image": "https://jeffreykang03.github.io/dsc106-project2/fig1_for.png",
+    "description": "A team project for DSC 106 that argues both sides of \"China, not the United States, is most responsible for climate change\" using the same CO2 data. One chart uses annual emissions since 1990 and the other uses cumulative emissions since 1960, to show how design choices like the time window change which country looks more responsible."
+  },
+  {
+    "title": "GG or FF? Predicting Pro League of Legends Outcomes",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "A DSC 80 project with Jeffrey Kang that predicts wins and losses in 2025 pro League of Legends games. It covers data cleaning, missingness analysis, hypothesis testing for a blue side advantage, and a tuned random forest model that reached about 83% test accuracy, plus a fairness check on support players."
+  },
+  {
+    "title": "Personal portfolio website",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "A responsive portfolio built with HTML, CSS, and JavaScript. It has a JS-generated navigation bar, a dark mode switch that remembers your choice, and project cards loaded from a JSON file."
+  },
+  {
+    "title": "UTime",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "A Swift iOS app built to encourage better study habits and productivity, with a focus on reducing procrastination when you're under stress. Developed as part of Kode With Klossy (KWK) 2025."
+  },
+  {
+    "title": "Campus Dining Wait Time Tracker",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Students waste time standing in long lines at dining halls. This project collects crowd reports and estimates wait times so people can pick the quietest spot."
+  },
+  {
+    "title": "Spotify Listening Habits Analysis",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "An exploration of how listening patterns change across the school year. It looks for links between study seasons, time of day, and the genres people pick."
+  },
+  {
+    "title": "Housing Price Predictor",
+    "year": "2024",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Renters and buyers struggle to tell whether a listing is fairly priced. This regression model estimates prices from size, location, and age, and flags listings that look off."
+  },
+  {
+    "title": "Recycling Sorter",
+    "year": "2024",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "People often put items in the wrong bin. This image classifier suggests whether an item is recyclable, compostable, or trash from a single photo."
+  },
+  {
+    "title": "Study Group Matcher",
+    "year": "2023",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Finding classmates who share your schedule and courses is harder than it should be. This web app pairs students based on availability and the classes they are taking."
+  },
+  {
+    "title": "Library Seat Finder",
+    "year": "2023",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Library seats fill up fast during finals week. This tool shows which floors have open seating so students do not have to walk around searching."
+  },
+  {
+    "title": "Weather Dashboard",
+    "year": "2022",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Weather apps bury the details people actually care about. This dashboard pulls forecast data and charts temperature, wind, and rain on one clean page."
+  },
+  {
+    "title": "Budget Buddy",
+    "year": "2021",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Many students lose track of where their money goes each month. This small app logs expenses by category and shows simple charts of spending over time."
+  }
 ]
