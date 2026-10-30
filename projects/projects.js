@@ -5,17 +5,23 @@ const projects = await fetchJSON('../lib/projects.json');
 
 const projectsContainer = document.querySelector('.projects');
 
-renderProjects(projects, projectsContainer, 'h2');
-
 const projectsTitle = document.querySelector('.projects-title');
 projectsTitle.textContent = `${projects.length} Projects`;
 
 let query = '';
-let selectedIndex = -1;
+let selectedYear = null;
 let searchInput = document.querySelector('.searchBar');
 
 let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
 let colors = d3.scaleOrdinal(d3.schemeTableau10);
+
+// Projects that match the current search text
+function getSearchMatches() {
+  return projects.filter((project) => {
+    let values = Object.values(project).join('\n').toLowerCase();
+    return values.includes(query.toLowerCase());
+  });
+}
 
 function renderPieChart(projectsGiven) {
   let newRolledData = d3.rollups(
@@ -28,6 +34,11 @@ function renderPieChart(projectsGiven) {
     return { value: count, label: year };
   });
 
+  // If the selected year has no projects under this search, drop the selection
+  if (!newData.some((d) => d.label === selectedYear)) {
+    selectedYear = null;
+  }
+
   let newSliceGenerator = d3.pie().value((d) => d.value);
   let newArcData = newSliceGenerator(newData);
   let newArcs = newArcData.map((d) => arcGenerator(d));
@@ -38,8 +49,10 @@ function renderPieChart(projectsGiven) {
   let legend = d3.select('.legend');
   legend.selectAll('li').remove();
 
-  // Add or remove the "selected" class based on selectedIndex
   function updateSelection() {
+    let selectedIndex = newData.findIndex((d) => d.label === selectedYear);
+
+    // highlight the selected wedge and legend item
     svg
       .selectAll('path')
       .attr('class', (_, idx) => (idx === selectedIndex ? 'selected' : ''));
@@ -49,6 +62,19 @@ function renderPieChart(projectsGiven) {
       .attr('class', (_, idx) =>
         idx === selectedIndex ? 'legend-item selected' : 'legend-item',
       );
+
+    // Cards use BOTH filters: the search (already in projectsGiven) and the year
+    let visibleProjects =
+      selectedYear === null
+        ? projectsGiven
+        : projectsGiven.filter((project) => project.year === selectedYear);
+
+    renderProjects(visibleProjects, projectsContainer, 'h2');
+  }
+
+  function toggleYear(year) {
+    selectedYear = selectedYear === year ? null : year;
+    updateSelection();
   }
 
   newArcs.forEach((arc, i) => {
@@ -56,10 +82,7 @@ function renderPieChart(projectsGiven) {
       .append('path')
       .attr('d', arc)
       .attr('fill', colors(i))
-      .on('click', () => {
-        selectedIndex = selectedIndex === i ? -1 : i;
-        updateSelection();
-      });
+      .on('click', () => toggleYear(newData[i].label));
   });
 
   newData.forEach((d, idx) => {
@@ -68,28 +91,15 @@ function renderPieChart(projectsGiven) {
       .attr('class', 'legend-item')
       .attr('style', `--color:${colors(idx)}`)
       .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`)
-      .on('click', () => {
-        selectedIndex = selectedIndex === idx ? -1 : idx;
-        updateSelection();
-      });
+      .on('click', () => toggleYear(d.label));
   });
 
   updateSelection();
 }
 
-renderPieChart(projects);
+renderPieChart(getSearchMatches());
 
 searchInput.addEventListener('input', (event) => {
   query = event.target.value;
-
-  let filteredProjects = projects.filter((project) => {
-    let values = Object.values(project).join('\n').toLowerCase();
-    return values.includes(query.toLowerCase());
-  });
-
-  renderProjects(filteredProjects, projectsContainer, 'h2');
-
-  // The wedges change when the data changes, so clear the old selection
-  selectedIndex = -1;
-  renderPieChart(filteredProjects);
+  renderPieChart(getSearchMatches());
 });
