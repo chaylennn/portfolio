@@ -177,3 +177,16 @@ article ul {
   grid-row: span 3;
   min-width: 0;
 }
+
+.project-year {
+  font-family: Baskerville, serif;
+  font-variant-numeric: oldstyle-nums;
+  color: color-mix(in oklch, canvastext, canvas 40%);
+  margin: 0;
+}
+
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+  overflow: visible;
+}
