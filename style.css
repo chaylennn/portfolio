@@ -233,3 +233,21 @@ article ul {
 #projects-pie-plot path {
   transition: 300ms;
 }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.5em;
+  margin: 0;
+}
+
+.stats dt {
+  grid-row: 1;
+  font-weight: bold;
+}
+
+.stats dd {
+  grid-row: 2;
+  margin: 0;
+  font-size: 200%;
+}
