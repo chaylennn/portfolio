@@ -265,21 +265,37 @@ dl.info {
   grid-template-columns: auto 1fr;
   gap: 0.25em 1em;
   margin: 0;
+  font-size: 0.9em;
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
 }
 
 dl.info dt {
-  color: color-mix(in oklch, canvastext, canvas 40%);
+  color: #666;
 }
 
 dl.info dd {
   margin: 0;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .tooltip {
   position: fixed;
   top: 1em;
   left: 1em;
+  padding: 0.75em 1em;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: black;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 10;
 }
 
 circle {
