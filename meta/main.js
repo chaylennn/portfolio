@@ -174,6 +174,9 @@ function renderScatterPlot(data, commits) {
     .domain([minLines, maxLines])
     .range([2, 30]);
 
+    // Sort commits by total lines in descending order so small dots draw on top
+  const sortedCommits = d3.sort(commits, (d) => -d.totalLines);
+
   // Draw the dots after the axes
   const dots = svg.append('g').attr('class', 'dots');
 
